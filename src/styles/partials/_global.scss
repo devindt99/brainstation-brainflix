@@ -53,8 +53,7 @@
   
   // Body Copy
   .body-copy {
-    display: flex;
-    flex-direction: column;
+
     @include typography(10px, 20px, 700); // Mobile default
   
     @media (min-width: 768px) { // Tablet

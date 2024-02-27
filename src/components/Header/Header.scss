@@ -4,9 +4,21 @@
 .page-header {
     display: flex;
     height: 1rem;
+    flex: 1;
     flex-direction: column;
     height: auto;
+    padding-top: $mobile-margin;
     width: 100%;
+
+    @media (min-width: 768px) { // Tablet
+        flex-direction: row;
+        
+      }
+    
+      @media (min-width: 1024px) { // Desktop
+        
+      }
+    
     &__logo {
         height: 4rem;
     }
@@ -23,7 +35,7 @@
     }
     &__upload {
         
-
+        margin: $mobile-margin;
         background-color: $BrainFlix-Blue;
         color: white;
         
@@ -31,7 +43,7 @@
 }
 
 .thumbnail {
-    height: 4rem;
+    height: auto;
     width: 4rem;
     border-radius: 90%;
 }

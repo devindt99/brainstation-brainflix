@@ -1,0 +1,78 @@
+// Define color variables
+$BrainFlix-Black: #323232;
+$BrainFlix-Blue: #0095FF;
+$Silver: #AFAFAF;
+$White: #FFFFFF;
+
+// Secondary Colors
+$Mercury: #E1E1E1;
+$Alabaster: #FAFAFA;
+$BrainFlix-DarkBlack: #000000;
+$BrainFlix-DarkBlue: #0065AD;
+
+// Grid settings for Desktop
+$desktop-columns: 63px;
+$desktop-margin: auto;
+$desktop-gutter: 24px;
+
+// Grid settings for Tablet
+$tablet-columns: auto;
+$tablet-margin: 36px; 
+$tablet-gutter: 24px; 
+
+// Grid settings for Mobile
+$mobile-columns: auto;
+$mobile-margin: 16px;
+$mobile-gutter: 16px;
+
+//Font weights
+$font-weight-bold: 700;
+$font-weight-demi: 600;
+$font-weight-regular: 400;
+
+body {
+  background-color: $White;
+  color: $BrainFlix-Black;
+}
+
+.button {
+  background-color: $BrainFlix-Blue;
+  color: $White;
+  &:hover {
+    background-color: $BrainFlix-DarkBlue;
+  }
+}
+
+.form-field {
+  border: 1px solid $Mercury;
+  background-color: $Alabaster;
+  &:focus {
+    outline: 2px solid $BrainFlix-Blue;
+  }
+}
+
+.secondary-text {
+  color: $Silver;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../../assets/font/AvenirNextLTPro-Regular.otf");
+    font-weight: $font-weight-regular;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../../assets/font/AvenirNextLTPro-Demi.otf");
+    font-weight: $font-weight-demi;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url("../../assets/font/avenirNextLTPro-Bold.otf");
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    font-display: swap;
+}

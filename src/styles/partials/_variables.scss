@@ -11,11 +11,13 @@ $BrainFlix-DarkBlack: #000000;
 $BrainFlix-DarkBlue: #0065AD;
 
 // Grid settings for Desktop
+$desktop-width: 1024px;
 $desktop-columns: 63px;
 $desktop-margin: auto;
 $desktop-gutter: 24px;
 
 // Grid settings for Tablet
+$tablet-width: 768px;
 $tablet-columns: auto;
 $tablet-margin: 36px; 
 $tablet-gutter: 24px; 
@@ -24,6 +26,17 @@ $tablet-gutter: 24px;
 $mobile-columns: auto;
 $mobile-margin: 16px;
 $mobile-gutter: 16px;
+
+$error-color: #D22D2D;
+
+// Size variables for responsiveness
+$desktop-form-height: 40px;
+$mobile-form-height: 36px;
+$form-min-width: 240px;
+$default-radius: 4px;
+$desktop-padding: 16px;
+$mobile-padding: 12px;
+$label-field-gap: 4px;
 
 //Font weights
 $font-weight-bold: 700;
@@ -43,13 +56,6 @@ body {
   }
 }
 
-.form-field {
-  border: 1px solid $Mercury;
-  background-color: $Alabaster;
-  &:focus {
-    outline: 2px solid $BrainFlix-Blue;
-  }
-}
 
 .secondary-text {
   color: $Silver;
@@ -57,21 +63,24 @@ body {
 
 @font-face {
     font-family: 'Avenir Next';
-    src: url("../../assets/font/AvenirNextLTPro-Regular.otf");
+    src: url("../../assets/font/AvenirNextLTPro-Regular.woff") format("woff"),
+    url("../../assets/font/AvenirNextLTPro-Regular.woff2") format("woff2");
     font-weight: $font-weight-regular;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Avenir Next';
-    src: url("../../assets/font/AvenirNextLTPro-Demi.otf");
+    src: url("../../assets/font/AvenirNextLTPro-Demi.woff") format("woff"),
+    url("../../assets/font/AvenirNextLTPro-Demi.woff2") format("woff2");
     font-weight: $font-weight-demi;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
     font-family: 'Avenir Next';
-    src: url("../../assets/font/avenirNextLTPro-Bold.otf");
+    src: url("../../assets/font/AvenirNextLTPro-Bold.woff") format("woff"), 
+    url("../../assets/font/AvenirNextLTPro-Bold.woff2") format("woff2");
     font-weight: $font-weight-bold;
     font-style: normal;
     font-display: swap;

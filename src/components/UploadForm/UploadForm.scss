@@ -1,0 +1,62 @@
+.upload-form-container {
+    max-width: 533px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  
+    .upload-form__label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    .upload-form__input,
+    .upload-form__textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .upload-form__textarea {
+      height: 100px; // Adjust height as necessary
+      resize: vertical; // Allows the user to resize the textarea vertically
+    }
+  
+    .upload-form__submit {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #00a8ff; // Example button color, adjust as needed
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+  
+      &:hover {
+        background-color: darken(#00a8ff, 10%);
+      }
+    }
+  
+    .upload-form__thumbnail {
+      width: 100%;
+      height: 180px; // Adjust height as necessary
+      background-color: #ddd; // Placeholder color for the thumbnail
+      // Add a background image if a thumbnail URL is available
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+    }
+  }
+  

@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    box-sizing: border-box;
     font-family: 'Avenir Next';
     overflow-x: hidden; // Prevents horizontal overflow
 }
@@ -16,11 +17,11 @@
   .page-header {
     @include typography(12px, 20px, 700); // Mobile default
   
-    @media (min-width: 768px) { // Tablet
+    @media (min-width: $tablet-width) { // Tablet
       @include typography(33px, 44px, 700);
     }
   
-    @media (min-width: 1024px) { // Desktop
+    @media (min-width: $desktop-width) { // Desktop
       @include typography(33px, 44px, 700); // Assuming same as tablet
     }
   }
@@ -29,11 +30,11 @@
   .section-header {
     @include typography(12px, 20px, 700); // Mobile default
   
-    @media (min-width: 768px) { // Tablet
+    @media (min-width: $tablet-width) { // Tablet
       @include typography(12px, 20px, 700);
     }
   
-    @media (min-width: 1024px) { // Desktop
+    @media (min-width: $desktop-width) { // Desktop
       @include typography(12px, 20px, 700); // Assuming same as tablet
     }
   }
@@ -42,11 +43,11 @@
   .subheader {
     @include typography(13px, 18px, 400); // Mobile default
   
-    @media (min-width: 768px) { // Tablet
+    @media (min-width: $tablet-width) { // Tablet
       @include typography(14px, 22px, 400);
     }
   
-    @media (min-width: 1024px) { // Desktop
+    @media (min-width: $desktop-width) { // Desktop
       @include typography(14px, 22px, 400); // Assuming same as tablet
     }
   }
@@ -56,24 +57,24 @@
 
     @include typography(10px, 20px, 700); // Mobile default
   
-    @media (min-width: 768px) { // Tablet
+    @media (min-width: $tablet-width) { // Tablet
       @include typography(12px, 20px, 700);
     }
   
-    @media (min-width: 1024px) { // Desktop
+    @media (min-width: $desktop-width) { // Desktop
       @include typography(12px, 20px, 700); // Assuming same as tablet
     }
   }
   
   // Labels & Buttons
-  .labels-and-buttons {
+  button, label {
     @include typography(12px, 20px, 700); // Mobile default
   
-    @media (min-width: 768px) { // Tablet
+    @media (min-width: $tablet-width) { // Tablet
       @include typography(24px, 32px, 700);
     }
   
-    @media (min-width: 1024px) { // Desktop
+    @media (min-width: $desktop-width) { // Desktop
       @include typography(24px, 32px, 700); // Assuming same as tablet
     }
   }

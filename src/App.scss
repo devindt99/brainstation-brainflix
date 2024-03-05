@@ -1,2 +1,19 @@
-@use './styles/partials/global' as *;
 @use './styles/partials/variables' as *;
+@use './styles/partials/global' as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir Next';
+}
+.body-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: $mobile-gutter;
+    @media (min-width: 768px) {
+        gap: $tablet-gutter
+    }
+}

@@ -1,49 +1,127 @@
-@use '../../styles/partials/global' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
 
 .page-header {
     display: flex;
-    height: 1rem;
-    flex: 1;
     flex-direction: column;
+    align-items: center;
     height: auto;
-    padding-top: $mobile-margin;
+    padding: 1rem;
     width: 100%;
+    row-gap: $mobile-margin;
 
-    @media (min-width: 768px) { // Tablet
+    @media (min-width: $tablet-width) {
         flex-direction: row;
-        
-      }
-    
-      @media (min-width: 1024px) { // Desktop
-        
-      }
-    
-    &__logo {
-        height: 4rem;
-    }
-    &__searchbar-container {
-        width: 90vw;
-        display: flex;
         justify-content: space-between;
-        gap: 4rem;
-        padding: 1rem;
+        gap: $tablet-margin;
+        padding: $desktop-margin;
+
     }
+
+    @media (min-width: $desktop-width) {
+        padding: auto;
+    }
+    &__container {
+        display: flex;
+        gap: 1rem;
+        
+        @media (min-width: $tablet-width) {
+
+            img {
+                display: none;
+            }
+        }
+
+    }
+    &__logo {
+        
+        max-height: 25px;
+        max-width: 120px;
+
+  
+        @media (min-width: $desktop-width) {
+            .page-header__logo {
+   
+            }
+        }
+
+    }
+
     &__searchbar {
-        height: 4rem;
-        width: 80vw;
+        flex: 1; // Allow the search bar to grow and fill the space
+        min-width: $form-min-width;
+        max-width: 100%;
+       
+        height: $mobile-form-height;
+        border-radius: $default-radius;
+        padding: $desktop-padding;
+        border: 1px solid $Mercury;
+        box-sizing: border-box;
+
+        @media (min-width: $tablet-width) {
+            height: $desktop-form-height;
+
+        }
+        @media (min-width: $desktop-width) {
+
+            height: $desktop-form-height;
+            
+        }
+        &:focus {
+            border-color: $BrainFlix-Blue;
+            outline: none;
+        }
+
+        &--input-error {
+            border-color: $error-color;
+        }
     }
+
     &__upload {
-        
-        margin: $mobile-margin;
         background-color: $BrainFlix-Blue;
+        font-size: 0.75rem;
+        //height: $mobile-form-height;
         color: white;
+
         
+        align-content: center;
+        @media (min-width: $tablet-width) {
+
+
+        }
+        @media (min-width: $desktop-width) {
+
+        }
     }
 }
 
-.thumbnail {
-    height: auto;
-    width: 4rem;
-    border-radius: 90%;
+#thumbnail-1 {
+    flex-basis: 36px; // Fixed basis
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    
+
+
+    @media (min-width: $tablet-width) {
+        display: none;
+        width: 40px;
+        height: 40px;
+    }
+}
+#thumbnail-2 {
+
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: none;
+
+
+    @media (min-width: $tablet-width) {
+        display: inherit;
+        width: 40px;
+        height: 40px;
+       
+        
+    }
 }

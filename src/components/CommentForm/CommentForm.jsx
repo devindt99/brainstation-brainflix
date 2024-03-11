@@ -25,7 +25,7 @@ const CommentForm = ({ videoId }) => {
         };
 
         try {
-            const response = await axios.post(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}/comments?api_key=204014cc-ba86-4e0f-b7f1-b7342bfe76aa`, requestBody);
+            const response = await axios.post(`http://localhost:8080/videos/${videoId}/comments`, requestBody);
             console.log(response.data);
             setComment('');
             setName('');

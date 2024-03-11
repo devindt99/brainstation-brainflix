@@ -10,7 +10,7 @@ const VideoThumbnails = ({ currentVideoId }) => {
     // Replace 'API_ENDPOINT' with the actual endpoint for your videos list
     const fetchVideos = async () => {
       try {
-        const response = await axios.get('https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=204014cc-ba86-4e0f-b7f1-b7342bfe76aa');
+        const response = await axios.get('http://localhost:8080/videos');
         setVideos(response.data);
       } catch (error) {
         console.error('Error fetching videos:', error);

@@ -1,6 +1,6 @@
 import React from 'react';
-import VideoThumbnails from '../../components/VideoThumbnail/VideoThumbnails'; // Adjust the path as necessary
-import videos from '../../data/videos.json'; // Adjust the path as necessary
+
+import VideoThumbnails from '../../components/VideoThumbnail/VideoThumbnails';
 import CurrentVideo from '../../components/CurrentVideo/CurrentVideo';
 import CommentForm from '../../components/CommentForm/CommentForm';
 
@@ -12,7 +12,7 @@ const HomePage = () => {
       <h1>Home Page</h1>
       <CurrentVideo videoId={defaultVideoId}/>
       <CommentForm videoId={defaultVideoId}/>
-      <VideoThumbnails videos={videos} currentVideoId={defaultVideoId}/>
+      <VideoThumbnails currentVideoId={defaultVideoId}/>
     </div>
   );
 };

@@ -6,8 +6,6 @@ import VideoDetailsPage from './pages/VideoDetailsPage/VideoDetailsPage';
 import Header from './components/Header/Header';
 import CurrentVideo from './components/CurrentVideo/CurrentVideo';
 import VideoThumbnails from './components/VideoThumbnail/VideoThumbnails';
-import videos from './data/videos.json';
-import videoDetails from './data/video-details.json';
 
 function App() {
   // Removed currentVideo state and clickVideo function
@@ -17,7 +15,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage videos={videos} />} /> {/* Pass videos as prop if needed */}
+          <Route path="/" element={<HomePage />} /> {/* Pass videos as prop if needed */}
           <Route path="/upload" element={<UploadPage />} />
           <Route path="/video/:id" element={<VideoDetailsPage />} />
         </Routes>

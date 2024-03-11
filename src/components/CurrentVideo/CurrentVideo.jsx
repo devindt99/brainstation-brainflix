@@ -13,7 +13,7 @@ const CurrentVideo = () => {
             try {
                 // Replace YOUR_API_ENDPOINT with the actual endpoint where video details can be fetched
                 // and ensure your API key is correctly appended as a query parameter if required by your API
-                const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}?api_key=204014cc-ba86-4e0f-b7f1-b7342bfe76aa`);
+                const response = await axios.get(`http://localhost:8080/videos/${id}`);
                 setCurrentVideo(response.data);
             } catch (error) {
                 console.error("Error fetching video details:", error);
